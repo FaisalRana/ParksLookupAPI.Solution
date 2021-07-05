@@ -11,14 +11,12 @@
 * .NET 5.0
 * ASP.NET Core
 * Entity Framework Core
-* Razor View Engine
 * MVC
 * RESTful Routing, CRUD & HTTP
 * REPL
 * MySQL & MySQL Workbench
 * Bootstrap
 * CSS
-* Many-to-Many Relationships
 * ASP.net Core Identity 
 
 

@@ -10,12 +10,12 @@ namespace ParkLookup.Models {
     protected override void OnModelCreating(ModelBuilder builder) {
       builder.Entity<Park>()
           .HasData(
-              new Park { ParkId = 1, Name = "Himalaya National Park", Established = "2020", Province = GB},
-              new Park { ParkId = 2, Name = "Hundrap-Shandur National Park", Established = "2012", Province = GB},
-              new Park { ParkId = 3, Name = "Nanga-Parbat National Park", Established = "2010", Province = GB},
-              new Park { ParkId = 4, Name = "Broghil Valley", Established = "1993", Province = KP},
-              new Park { ParkId = 5, Name = "Central Karakoram", Established = "1987", Province = GB}
-          );
+              new Park { ParkId = 1, Name = "Himalaya National Park", Established = 2020, Province = "GB"},
+              new Park { ParkId = 2, Name = "Hundrap-Shandur National Park", Established = 2012, Province = "GB"},
+              new Park { ParkId = 3, Name = "Nanga-Parbat National Park", Established = 2010, Province = "GB"},
+              new Park { ParkId = 4, Name = "Broghil Valley", Established = 1993, Province = "KP"},
+              new Park { ParkId = 5, Name = "Central Karakoram", Established = 1987, Province = "GB"}
+        );
     }
   }
 }
