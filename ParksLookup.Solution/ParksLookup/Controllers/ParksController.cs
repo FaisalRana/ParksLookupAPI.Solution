@@ -17,94 +17,90 @@ namespace ParkLookup.Controllers {
       _context = context;
     }
 
-  //   // GET: api/Parkså
-  //   [HttpGet]
-  //   public async Task<ActionResult<IEnumerable<Animal>>> Get(string species, int id, string name, string gender, int age) {
-  //     var query = _context.Parks.AsQueryable();
+    // GET: api/Parkså
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, int established, string province, int coordinates) {
+      var query = _context.Parks.AsQueryable();
 
-  //     if (species != null) {
-  //       query = query.Where(entry => entry.Species == species);
-  //     }
-  //     if (id != 0) {
-  //       query = query.Where(entry => entry.AnimalId == id);
-  //     }
-  //     if (name != null) {
-  //       query = query.Where(entry => entry.Name == name);
-  //     }
-  //     if (gender != null) {
-  //       query = query.Where(entry => entry.Gender == gender);
-  //     }
-  //     if (age != 0) {
-  //       query = query.Where(entry => entry.Gender == gender);
-  //     }
+      if (name != null) {
+        query = query.Where(entry => entry.Name == name);
+      }
+      if (established != 0) {
+        query = query.Where(entry => entry.Established == established);
+      }
+      if (province != null) {
+        query = query.Where(entry => entry.Province == province);
+      }
+      if (coordinates != 0) {
+        query = query.Where(entry => entry.Coordinates == coordinates);
+      }
 
-  //     return await query.ToListAsync();
-  //   }
+      return await query.ToListAsync();
+    }
 
-  //   // GET: api/Parks/5
-  //   [HttpGet("{id}")]
-  //   public async Task<ActionResult<Animal>> GetAnimal(int id) {
-  //     var animal = await _context.Parks.FindAsync(id);
+    // GET: api/Parks/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Park>> GetPark(int id) {
+      var Park = await _context.Parks.FindAsync(id);
 
-  //     if (animal == null) {
-  //       return NotFound();
-  //     }
+      if (Park == null) {
+        return NotFound();
+      }
 
-  //     return animal;
-  //   }
+      return Park;
+    }
 
-  //   // PUT: api/Parks/5
-  //   // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-  //   [HttpPut("{id}")]
-  //   public async Task<IActionResult> PutAnimal(int id, Animal animal) {
-  //     if (id != animal.AnimalId) {
-  //       return BadRequest();
-  //     }
+    // PUT: api/Parks/5
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutPark(int id, Park park) {
+      if (id != park.ParkId) {
+        return BadRequest();
+      }
 
-  //     _context.Entry(animal).State = EntityState.Modified;
+      _context.Entry(park).State = EntityState.Modified;
 
-  //     try {
-  //       await _context.SaveChangesAsync();
-  //     }
-  //     catch (DbUpdateConcurrencyException) {
-  //       if (!AnimalExists(id)) {
-  //         return NotFound();
-  //       }
-  //       else {
-  //         throw;
-  //       }
-  //     }
+      try {
+        await _context.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException) {
+        if (!ParkExists(id)) {
+          return NotFound();
+        }
+        else {
+          throw;
+        }
+      }
 
-  //     return NoContent();
-  //   }
+      return NoContent();
+    }
 
-  //   // POST: api/Parks
-  //   // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-  //   [HttpPost]
-  //   public async Task<ActionResult<Animal>> PostAnimal(Animal animal) {
-  //     _context.Parks.Add(animal);
-  //     await _context.SaveChangesAsync();
+    // POST: api/Parks
+    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+    [HttpPost]
+    public async Task<ActionResult<Park>> PostPark(Park Park) {
+      _context.Parks.Add(Park);
+      await _context.SaveChangesAsync();
 
-  //     return CreatedAtAction("GetAnimal", new { id = animal.AnimalId }, animal);
-  //   }                         // location      // new id                //actual instance of the animal 
+      return CreatedAtAction("{PostPark", new { id = Park.ParkId }, Park);
+    }                         // location      // new id                //actual instance of the Park 
 
-  //   // DELETE: api/Parks/5
-  //   [HttpDelete("{id}")]
-  //   public async Task<IActionResult> DeleteAnimal(int id) {
-  //     var animal = await _context.Parks.FindAsync(id);
-  //     if (animal == null) {
-  //       return NotFound();
-  //     }
+    // DELETE: api/Parks/5
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeletePark(int id) {
+      var Park = await _context.Parks.FindAsync(id);
+      if (Park == null) {
+        return NotFound();
+      }
 
-  //     _context.Parks.Remove(animal);
-  //     await _context.SaveChangesAsync();
+      _context.Parks.Remove(Park);
+      await _context.SaveChangesAsync();
 
-  //     return NoContent();
-  //   }
+      return NoContent();
+    }
 
-  //   private bool AnimalExists(int id) {
-  //     return _context.Parks.Any(e => e.AnimalId == id);
-    // }
+    private bool ParkExists(int id) {
+      return _context.Parks.Any(e => e.ParkId == id);
+    }
   }
 }
-

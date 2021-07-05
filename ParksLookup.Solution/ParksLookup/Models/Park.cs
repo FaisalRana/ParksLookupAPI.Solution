@@ -8,6 +8,7 @@ namespace ParkLookup.Models
       public string Name { get; set; }
       public int Established { get; set; }
       public string Province { get; set; }
+      public int Coordinates { get; set; }
 
     }
 }
