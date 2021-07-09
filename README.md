@@ -66,9 +66,6 @@ GET /api/parks/?location=GB
 
 This project utilizes full swagger documentation that can be found here: https://app.swaggerhub.com/apis-docs/faisalrana/ParksApi/0.1
 
-![Image of swagger documentation](./Parks/wwwroot/img/swagger_screenshot.png)
-
-
 ## Known Bugs
 
 No known bugs at this time
