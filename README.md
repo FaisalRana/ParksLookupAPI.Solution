@@ -33,15 +33,15 @@ This is a C# API Framework application built to allow users to make API calls to
 * _Next you will need to download and install .NET Core through this link if you don't already have it: https://dotnet.microsoft.com/download_
 * _After downloading and installing .NET Core, return to your terminal and navigate to the root directory by entering `$ cd Parks.Solution`_
 * _Open this project in Visual Studio Code with the command `$ code .`_
-* _Still in the terminal, navigate to the desired subdirectory of the repository with the command `$ cd Parks`_
+* _Still in the terminal, navigate to the desired subdirectory of the repository with the command `$ cd ParksLookup`_
 * _Retrieve and install packages listed in the .csproj files with the command `$ dotnet restore`_
 * _Create internal content for build with the command `$ dotnet build`_
-* _In Visual Studio Code, navigate to the `Parks` directory and create an **appsettings.json** file and input the following script (**note the name of the database can be whatever you would like (e.g. faisal_rana_test)**)_
+* _In Visual Studio Code, navigate to the `ParksLookup` directory and create an **appsettings.json** file and input the following script (**note the name of the database can be whatever you would like (e.g. faisal_rana_test)**)_
 ![Image of appsettings.json example](/ParksLookup.Solution/ParksLookup/wwwroot/images/appsettings.json_test.png)
 * _If you do not have MySQL Workbench, it can be downloaded here: https://dev.mysql.com/downloads/file/?id=484391_
 * _Create Initial SQL migration with the following command `$ dotnet ef migrations add Initial`_
 * _Update the database in MySQL Workbench with the following command `$ dotnet ef database update` (**note this will title the database whatever you listed in your appsettings.json file (e.g. faisal_rana_test)**) _
-* _Back in the terminal, navigate to `$ cd Parks` and run the application with the command `$ dotnet run`
+* _Back in the terminal, navigate to `$ cd ParksLookup` and run the application with the command `$ dotnet run`
 
 
 ## Documentation
