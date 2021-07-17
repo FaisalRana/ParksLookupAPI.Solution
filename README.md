@@ -31,7 +31,7 @@ This is a C# API Framework application built to allow users to make API calls to
 * _Navigate to the directory inside of which you wish to house this project_
 * _Clone this project with the following command  `$ git clone <https://github.com/FaisalRana/ParksLookupAPI.Solution>`_
 * _Next you will need to download and install .NET Core through this link if you don't already have it: https://dotnet.microsoft.com/download_
-* _After downloading and installing .NET Core, return to your terminal and navigate to the root directory by entering `$ cd Parks.Solution`_
+* _After downloading and installing .NET Core, return to your terminal and navigate to the root directory by entering `$ cd ParksLookup.Solution`_
 * _Open this project in Visual Studio Code with the command `$ code .`_
 * _Still in the terminal, navigate to the desired subdirectory of the repository with the command `$ cd ParksLookup`_
 * _Retrieve and install packages listed in the .csproj files with the command `$ dotnet restore`_
@@ -54,7 +54,9 @@ POST /api/parks
 PUT /api/parks/{id}
 DELETE /api/parks/{id}
 ```
-This project also has an additional endpoint to launch swagger UI which can be used to identify and execute all working endpoints.  
+This project also has an additional endpoint to find and return a random park from the database
+```
+GET /api/parks/random
 ```
 
 #### Example Query
@@ -62,9 +64,15 @@ This project also has an additional endpoint to launch swagger UI which can be u
 GET /api/parks/?location=GB
 ```
 
+
 #### Swagger
 
-This project utilizes full swagger documentation that can be found here: https://app.swaggerhub.com/apis-docs/faisalrana/ParksApi/0.1
+Swagger was utilized in this program to provide documenetation and an map of the endpoints of this project.  
+After running the project succesfully, please navigate to https://localhost:5001/swagger/index.html
+
+![Image of appsettings.json example](/ParksLookup.Solution/ParksLookup/wwwroot/images/Swagger.png)
+
+
 
 ## Known Bugs
 
@@ -72,7 +80,7 @@ No known bugs at this time
 
 ## Improvement Opportunities
 
-* Eventually have all National and State parks included in the database
+* Eventually have all Tourism Locations and parks in Pakistan included in the database
 * Create an MVC application that interacts with the API
 
 ## Link
