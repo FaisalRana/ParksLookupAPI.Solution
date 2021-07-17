@@ -72,7 +72,7 @@ Swagger was utilized in this program to provide documenetation and an map of the
 After running the project succesfully, please navigate to https://localhost:5001/swagger/index.html
 Here you can see all the working endpoints for this API.
 
-![Image of appsettings.json example](/ParksLookupAPI.Solution/ParksLookup/wwwroot/images/Swagger.png)
+![Image of appsettings.json example](/ParksLookup/wwwroot/images/Swagger.png)
 
 
 
