@@ -31,7 +31,7 @@ This is a C# API Framework application built to allow users to make API calls to
 * _Navigate to the directory inside of which you wish to house this project_
 * _Clone this project with the following command  `$ git clone <https://github.com/FaisalRana/ParksLookupAPI.Solution>`_
 * _Next you will need to download and install .NET Core through this link if you don't already have it: https://dotnet.microsoft.com/download_
-* _After downloading and installing .NET Core, return to your terminal and navigate to the root directory by entering `$ cd ParksLookup.Solution`_
+* _After downloading and installing .NET Core, return to your terminal and navigate to the root directory by entering `$ cd ParksLookupAPI.Solution`_
 * _Open this project in Visual Studio Code with the command `$ code .`_
 * _Still in the terminal, navigate to the desired subdirectory of the repository with the command `$ cd ParksLookup`_
 * _Retrieve and install packages listed in the .csproj files with the command `$ dotnet restore`_
@@ -53,12 +53,14 @@ GET /api/parks/{id}
 POST /api/parks
 PUT /api/parks/{id}
 DELETE /api/parks/{id}
+```
 
 ```
 GET /api/parks/random
 ```
 
 #### Example Query
+
 ```
 GET /api/parks/?location=GB
 ```
@@ -68,6 +70,7 @@ GET /api/parks/?location=GB
 
 Swagger was utilized in this program to provide documenetation and an map of the endpoints of this project.  
 After running the project succesfully, please navigate to https://localhost:5001/swagger/index.html
+Here you can see all the working endpoints for this API.
 
 ![Image of appsettings.json example](/ParksLookup.Solution/ParksLookup/wwwroot/images/Swagger.png)
 
