@@ -53,8 +53,7 @@ GET /api/parks/{id}
 POST /api/parks
 PUT /api/parks/{id}
 DELETE /api/parks/{id}
-```
-This project also has an additional endpoint to find and return a random park from the database
+
 ```
 GET /api/parks/random
 ```
